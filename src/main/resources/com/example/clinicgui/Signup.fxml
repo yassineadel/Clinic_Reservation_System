@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="401.0" prefWidth="617.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clinicgui.Signup">
+   <children>
+      <StackPane prefHeight="400.0" prefWidth="635.0">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="635.0">
+               <image>
+                  <Image url="@images/practitionerlogin.jpeg" />
+               </image>
+            </ImageView>
+            <AnchorPane prefHeight="390.0" prefWidth="566.0">
+               <children>
+                  <Label layoutX="16.0" layoutY="16.0" prefHeight="18.0" prefWidth="146.0" text="Select between...">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                     </font>
+                  </Label>
+                   <!--user choice id--><ChoiceBox fx:id="UserChoice" layoutX="14.0" layoutY="38.0" prefWidth="150.0" style="-fx-background-color: lightgrey;" value="">
+                       <items>
+                           <FXCollections fx:factory="observableArrayList">
+                               <String fx:value="Practitioner" />
+                               <String fx:value="Patient" />
+                           </FXCollections>
+                       </items>
+                   </ChoiceBox>
+                  <!--Practitioner data-->
+                  <!--ID--> <TextField fx:id="PractitionerID" layoutX="11.0" layoutY="83.0" prefHeight="26.0" prefWidth="245.0" promptText="PractitionerID" style="-fx-background-color: white; -fx-border-color: blue; -fx-border-radius: 40; -fx-background-radius: 40;" visible="false" />
+                  <!--Name--><TextField fx:id="PractitionerName" layoutX="11.0" layoutY="130.0" prefHeight="26.0" prefWidth="245.0" promptText="Practitioner Name" style="-fx-background-color: white; -fx-border-color: blue; -fx-border-radius: 40; -fx-background-radius: 40;" visible="false" />
+                  <!--department--><TextField fx:id="PractitionerDepartment" layoutX="11.0" layoutY="174.0" prefWidth="245.0" promptText="Department" style="-fx-background-color: white; -fx-border-color: blue; -fx-border-radius: 40; -fx-background-radius: 40;" visible="false" />
+                  <!--email--><TextField fx:id="Practitioneremail" layoutX="11.0" layoutY="217.0" prefWidth="245.0" promptText="Email" style="-fx-background-color: white; -fx-border-color: blue; -fx-border-radius: 40; -fx-background-radius: 40;" visible="false" />
+                  <!--password--> <TextField fx:id="Practitionerpassword" layoutX="11.0" layoutY="255.0" prefWidth="245.0" promptText="Password" style="-fx-background-color: white; -fx-border-color: blue; -fx-border-radius: 40; -fx-background-radius: 40;" visible="false" />
+                  <Button fx:id="Submit" layoutX="511.0" layoutY="359.0" mnemonicParsing="false" onAction="#DoneSubmitting" prefHeight="26.0" prefWidth="109.0" style="-fx-background-color: transparent; -fx-border-color: red; -fx-border-radius: 10px; -fx-cursor: hand;" text="Sign-Up">
+                     <font>
+                        <Font name="Bauhaus 93" size="13.0" />
+                     </font>
+                  </Button>
+                 <VBox fx:id="PatientVBOX" alignment="CENTER" layoutX="293.0" layoutY="46.0" prefHeight="310.0" prefWidth="298.0" spacing="10.0" visible="false">
+                     <children>
+                        <!--Patient detail-->
+                       <!--ID--> <TextField fx:id="patientID" promptText="PatientID" style="-fx-background-color: white; -fx-border-color: red; -fx-background-radius: 40; -fx-border-radius: 40;">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <!--name--> <TextField fx:id="patientName" promptText="Patient Name" style="-fx-background-color: white; -fx-border-color: red; -fx-background-radius: 40; -fx-border-radius: 40;">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <!--age--> <TextField fx:id="patientAge" promptText="Patient Age" style="-fx-background-color: white; -fx-border-color: red; -fx-background-radius: 40; -fx-border-radius: 40;">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: lightgrey; -fx-border-color: red; -fx-border-radius: 40; -fx-background-radius: 40;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="18.0" prefWidth="134.0" style="-fx-background-color: lightgrey; -fx-background-radius: 40;" text="Gender :">
+                                 <font>
+                                    <Font name="Arial Black" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="GenderChoiceBox" prefWidth="150.0">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="Male" />
+                                       <String fx:value="Female" />
+                                    </FXCollections>
+                                 </items>
+                              </ChoiceBox>
+                           </children>
+                        </HBox>
+                       <!--phone number--> <TextField fx:id="patientPhoneNUM" promptText="Phone Number" style="-fx-background-color: white; -fx-border-color: red; -fx-background-radius: 40; -fx-border-radius: 40;">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <!--email--> <TextField fx:id="patientEmail" promptText="Email" style="-fx-background-color: white; -fx-border-color: red; -fx-background-radius: 40; -fx-border-radius: 40;">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <!--password--> <TextField fx:id="patientPassword" promptText="Password" style="-fx-background-color: white; -fx-border-color: red; -fx-background-radius: 40; -fx-border-radius: 40;">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

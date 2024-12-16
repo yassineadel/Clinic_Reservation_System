@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="352.0" prefWidth="399.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clinicgui.AfterLoginPatientController">
+   <children>
+      <ImageView fitHeight="504.0" fitWidth="586.0">
+         <image>
+            <Image url="@images/patientbackground.jpeg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="167.0" layoutY="50.0" prefHeight="18.0" prefWidth="252.0" text="Welcome" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="161.0" prefHeight="22.0" prefWidth="157.0" text="Choose Department:">
+         <font>
+            <Font name="Bodoni MT" size="16.0" />
+         </font></Label>
+      <!--Department Choices--><ChoiceBox fx:id="DepartmentChoices" layoutX="274.0" layoutY="159.0" prefWidth="150.0" />
+      <Label layoutX="38.0" layoutY="232.0" text="Choose Desired Doctor:">
+         <font>
+            <Font name="Bodoni MT" size="16.0" />
+         </font></Label>
+      <!--Desired Doctor--><ChoiceBox fx:id="DoctorChoices" layoutX="274.0" layoutY="230.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="38.0" layoutY="298.0" text="Appointment Date:">
+         <font>
+            <Font name="Bodoni MT" size="16.0" />
+         </font></Label>
+      <!--Appointment Date--><ChoiceBox fx:id="appointmentDateChoiceBox" layoutX="274.0" layoutY="296.0" prefWidth="150.0" />
+      <Label layoutX="38.0" layoutY="365.0" text="Appointment Time:">
+         <font>
+            <Font name="Bodoni MT" size="16.0" />
+         </font></Label>
+      <!--Apointment time--><ChoiceBox fx:id="AppointmentChoicesTime" layoutX="274.0" layoutY="363.0" prefWidth="150.0" />
+      <Button fx:id="confirmReservationButton" layoutX="408.0" layoutY="455.0" mnemonicParsing="false" style="-fx-background-color: black; -fx-border-color: blue; -fx-border-radius: 10; -fx-background-radius: 10;" text="Confirm Reservation">
+         <font>
+            <Font name="Bodoni MT" size="16.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.4911504087194932" centerY="0.583333326108528" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2906091511249542" green="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.45154777927321677">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill></Button>
+      <Button fx:id="CancelReservation" layoutX="35.0" layoutY="455.0" mnemonicParsing="false" onAction="#ReturnBack" style="-fx-background-color: black; -fx-border-color: blue; -fx-border-radius: 10; -fx-background-radius: 10;" text="Cancel Reservation">
+         <font>
+            <Font name="Bodoni MT" size="16.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.4911504087194932" centerY="0.583333326108528" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2906091511249542" green="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.45154777927321677">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Button>
+   </children>
+</AnchorPane>

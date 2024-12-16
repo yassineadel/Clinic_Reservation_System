@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="378.0" prefWidth="574.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clinicgui.Rating">
+   <TableView fx:id="statisticsTable" layoutX="10" layoutY="10" prefHeight="250" prefWidth="580">
+      <columns>
+         <TableColumn fx:id="nameColumn" prefWidth="200" text="Practitioner Name" />
+         <TableColumn fx:id="averageRatingColumn" prefWidth="150" text="Average Rating" />
+         <TableColumn fx:id="appointmentsColumn" prefWidth="150" text="Appointments" />
+      </columns>
+   </TableView>
+
+   <Label layoutX="10" layoutY="270" text="Select Practitioner:" />
+   <ComboBox fx:id="practitionerComboBox" layoutX="150" layoutY="265" prefWidth="150" />
+
+   <Label layoutX="10" layoutY="310" text="Select Rating:" />
+   <ComboBox fx:id="ratingComboBox" layoutX="150" layoutY="305" prefWidth="80" />
+
+   <Button fx:id="submitRatingButton" layoutX="250.0" layoutY="305.0" onAction="#submitRating" style="-fx-background-color: purple; -fx-border-color: red; -fx-border-radius: 10; -fx-background-radius: 10;" text="Submit Rating" textFill="WHITE" />
+   <Label fx:id="confirmationLabel" layoutX="10" layoutY="350" textFill="green" />
+   <Button fx:id="returntomainmenu" layoutX="381.0" layoutY="305.0" mnemonicParsing="false" onAction="#gotomainmenu" prefHeight="32.0" prefWidth="170.0" style="-fx-background-color: purple; -fx-border-color: red; -fx-background-radius: 10; -fx-border-radius: 10;" text="Return to main menu" textFill="WHITE">
+      <font>
+         <Font name="Calibri Light" size="16.0" />
+      </font>
+   </Button>
+</AnchorPane>
